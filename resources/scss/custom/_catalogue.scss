@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.market-page {
+  // button
+  .btn.btn-rolo-light {
+    background-color: #748067;
+  }
+
+  .btn.btn-rolo-dark {
+    background-color: #375737;
+  }
+
+  .btn.btn-outline-secondary {
+    border-color: #d2d6da;
+  }
+
+  // Header
+  .brand {
+    letter-spacing: 0.25rem;
+  }
+
+  .search-group {
+    border-radius: 0.75rem;
+    input {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+
+  .product-card {
+    border-radius: .5rem;
+
+    .product-card-header {
+      border: 1px solid var(--bs-gray-200);
+      border-radius: .5rem;
+      background: #fff;
+    }
+
+    .product-card-image {
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: contain;
+      padding: 1rem;
+    }
+    .card-body {
+      padding: 1rem 1.25rem 1.25rem;
+      border: 0 !important;
+    }
+    .card-title {
+      font-weight: 600;
+    }
+  }
+}

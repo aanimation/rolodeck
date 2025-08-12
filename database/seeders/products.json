@@ -1,0 +1,106 @@
+[
+    {
+        "name": "Barista Express",
+        "short_desc": "The best-selling, home espresso machine, with a built-in grinder",
+        "description": "One of the world&quot;s popular and well-recommended espresso machines for home use, the Barista Express is perfect for anyone wanting to get into coffee.\n\nThis semi-automatic machine balances simplicity and flexibility. With automated, low pressure pre-infusion and shot timers, you can pull espresso at just the press of a button. Hone your skills tamping, and experimenting with various beans, doses and grind sizes.\n\nWith an in-built grinder and steam wand, this all-in-one setup is all you need is freshly roasted coffee beans and a weighing scale, to take your espresso to the next level and make cafe-level, specialty coffee at home.",
+        "content": [
+            "54mm Portafilter, stainless steel with double spout",
+            "4 Espresso Filter Baskets - 9g &amp; 18g pressurised, 9g &amp; 18g unpressurised",
+            "Integrated, Magnetic Tamper",
+            "480ml (16oz) Thermal Milk Jug",
+            "Dosing Funnel",
+            "Leveling Tool",
+            "Water Filter",
+            "Maintenance Kit - cleaning brush, Allen key, cleaning disc, steam wand pin",
+            "1 Descaling Dose, and 2 Cleaning Tablets"
+        ],
+        "colors": [
+            "stainless steel",
+            "black truffle"
+        ],
+        "price": 998,
+        "promo_price": 798,
+        "promo_percent": null,
+        "image_urls": [
+            "products/barista-express-1-steel.png",
+            "products/barista-express-2-black.png",
+            "products/barista-express-3.png",
+            "products/barista-express-4.png",
+            "products/barista-express-5-accesories.png"
+        ]
+    },
+    {
+        "name": "Bambinoo",
+        "short_desc": "The best value for money, standalone espresso machine",
+        "description": "The Breville Bambino is one of the best, entry-level espresso machines to brew cafe, specialty coffee from home.\n\nWith its small, compact profile, the Bambino is perfect for budding enthusiasts, letting you step up and pair this with a grinder of your choice.\n\nCompared to the Bambino Plus, this has a fully manual steam wand, letting you to practice and hone your milk steaming, and impress guests with your latte art.",
+        "content": [
+            "54mm Portafilter, with double spout",
+            "4 Espresso Filter Baskets - 9g &amp; 18g pressurised, 9g &amp; 18g unpressurised",
+            "54mm Plastic Tamper",
+            "480ml (16oz) Thermal Milk Jug",
+            "Maintenance Kit - cleaning disc, steam wand pin",
+            "1 Descaling Dose"
+        ],
+        "colors": null,
+        "price": 498,
+        "promo_price": null,
+        "promo_percent": null,
+        "image_urls": [
+            "products/bambino-1.png",
+            "products/bambino-2.png",
+            "products/bambino-3.png",
+            "products/bambino-4.png"
+        ]
+    },
+    {
+        "name": "Bambinoo Plus",
+        "short_desc": "Everything in the Bambino, plus automatic milk frothing",
+        "description": "The Breville Bambino is already one of the best, entry-level espresso machines to brew cafe, specialty coffee from home.\n\nThe Bambino Plus takes that even further, giving you more simplicity with automatic milk frothing, to elevate your lattes and cappuccinos.\n\nWith its small, compact profile, the Bambino Plus is perfect for budding enthusiasts, letting you step up and pair this with a grinder of your choice.",
+        "content": [
+            "54mm Portafilter, with double spout",
+            "4 Espresso Filter Baskets - 9g &amp; 18g pressurised, 9g &amp; 18g unpressurised",
+            "54mm Tamper",
+            "480ml (16oz) Thermal Milk Jug",
+            "Leveling Tool",
+            "Maintenance Kit - cleaning disc, steam wand pin",
+            "1 Descaling Dose, and 2 Cleaning Tablets"
+        ],
+        "colors": null,
+        "price": 598,
+        "promo_price": null,
+        "promo_percent": null,
+        "image_urls": [
+            "products/bambino-plus-1.png",
+            "products/bambino-plus-2.png",
+            "products/bambino-plus-3.png",
+            "products/bambino-plus-4.png"
+        ]
+    },
+    {
+        "name": "Oracle Touch",
+        "short_desc": "Top of the line Dual Boiler performance with touch screen usability.",
+        "description": "The Oracle Touch is the pinnacle of Breville&quot;s espresso machines.\n\nThis semi-automatic machine balances simplicity and flexibility. With automated, low pressure pre-infusion and shot timers, you can pull espresso at just the press of a button. Hone your skills tamping, and experimenting with various beans, doses and grind sizes.\n\nWith an in-built grinder and steam wand, this all-in-one setup is all you need is freshly roasted coffee beans and a weighing scale, to take your espresso to the next level and make cafe-level, specialty coffee at home.",
+        "content": [
+            "58mm Portafilter, stainless steel with double spout",
+            "2 Espresso Filter Baskets - 9g &amp; 18g unpressurised",
+            "Integrated, Magnetic Tamper",
+            "480ml (16oz) Thermal Milk Jug",
+            "Dosing Funnel",
+            "Leveling Tool",
+            "Knock Box",
+            "Water Filter",
+            "Maintenance Kit - cleaning brushes, Allen keys, cleaning disc, steam wand pin",
+            "1 Descaling Dose, Steam Wand Cleaner and 2 Cleaning Tablets"
+        ],
+        "colors": null,
+        "price": 598,
+        "promo_price": null,
+        "promo_percent": null,
+        "image_urls": [
+            "products/oracle-touch-1.png",
+            "products/oracle-touch-2.png",
+            "products/oracle-touch-3.png",
+            "products/oracle-touch-4.png"
+        ]
+    }
+]
