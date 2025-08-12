@@ -68,6 +68,11 @@ class Product extends Component
         $this->currentThumb = $idx;
     }
 
+    public function selectColor(string $color)
+    {
+        $this->selectedColor = $color;
+    }
+
     public function render()
     {
         return view('livewire.market.page.product');

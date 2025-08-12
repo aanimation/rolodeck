@@ -44,11 +44,12 @@
 
                 @if($item->colors)
                 <div class="mb-4">
-                    <h6>Colour</h6>
+                    <h6 class="fw-normal">Colour</h6>
                     <div class="d-flex align-items-center">
-                        <div class="color-option bg-light selected-color" data-color="stainless-steel" style="width:30px; height:30px; border-radius:50%; border:2px solid #000; margin-right:10px; cursor: pointer;"></div>
-                        <div class="color-option bg-dark" data-color="black" style="width:30px; height:30px; border-radius:50%; margin-right:10px; cursor: pointer;"></div>
-                        <span class="ms-auto">Stainless Steel</span>
+                        @foreach($item->colors as $color)
+                            <div wire:click="selectColor('{{ $color }}')" class="bg-{{ Str::contains($color, 'black') ? 'dark' : 'light' }} rounded me-3 cursor-pointer" style="width:30px; height:30px;"></div>
+                        @endforeach
+                        <span class="ms-auto text-capitalize">{{ $selectedColor ?? $item->colors[0] }}</span>
                     </div>
                 </div>
                 @endif
