@@ -20,6 +20,8 @@ php artisan storage:link
 
 npm install
 npm run dev
+
+php artisan serve
 ```
 
 ## Sitemap
