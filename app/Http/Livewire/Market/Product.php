@@ -21,13 +21,17 @@ class Product extends Component
 
     public function mount()
     {
+        if (session()->missing('current_session')) {
+            return redirect()->back();
+        }
+
         $this->currentSession = session('current_session');
 
         try {
             $this->item = Model::whereSlug($this->slug)->firstOrFail();
         } catch(\Exception $e) {
             \Log::error(['No item found', $this->slug, $e->getMessage()]);
-            return redirect()->route('catalogue');
+            return redirect()->back();
         }
 
         if ($cart = Order::whereSession($this->currentSession)->first()) {
@@ -48,7 +52,7 @@ class Product extends Component
             ]);
         } catch(\Exception $e) {
             \Log::error(['No item found', $this->slug, $e->getMessage()]);
-            return redirect()->route('catalogue');
+            return redirect()->back();
         }
 
         Cart::updateOrCreate([
@@ -57,7 +61,7 @@ class Product extends Component
             'color' => $this->selectedColor
         ],[
             'unit' => DB::raw('unit + 1'),
-            'price' => $this->item->promo_price ?? $this->item->price,
+            'price' => DB::raw('price + '.($this->item->promo_price ?? $this->item->price)),
         ]);
 
         $this->cartCount++;

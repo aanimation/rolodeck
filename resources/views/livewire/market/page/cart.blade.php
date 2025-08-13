@@ -21,7 +21,7 @@
                         @endif
                     </div>
                     <div class="text-end me-3">
-                        <p class="mb-0 fw-bold">${{ number_format($item->price, 0) }}</p>
+                        <p class="mb-0 fw-bold">${{ number_format($item->product->promo_price ?? $item->product->price, 0, ".", "") }}</p>
                         <p class="mb-0 text-muted small">{{ $item->unit }} unit</p>
                     </div>
                 </li>
@@ -36,7 +36,7 @@
                 <i class="fa fa-chevron-left me-2"></i> Back
             </a>
             <div class="d-flex align-items-center">
-                <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($order->items->sum('price'), 0) }}</strong>
+                <strong class="fs-5 fw-normal me-3 mb-3">Total ${{ number_format($order->items->sum('price'), 0, ".", "") }}</strong>
                 <div wire:click="doCheckout" wire:loading.attr="disabled" class="btn btn-rolo-dark text-white">
                     <span wire:loading.remove>Checkout <i class="fa fa-chevron-right ms-2"></i></span>
                     <span wire:loading.delay.longest>Preparing...</span>

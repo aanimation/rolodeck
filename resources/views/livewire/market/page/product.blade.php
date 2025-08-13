@@ -35,9 +35,9 @@
 
                 <div class="d-flex align-items-center mb-4">
                     @if($item->promo_price)
-                    <del class="me-3">${{ number_format($item->price, 0) }}</del>
+                    <del class="me-3">${{ number_format($item->price, 0, ".", "") }}</del>
                     @endif
-                    <span class="fs-4 fw-bold">${{ number_format($item->promo_price ?? $item->price, 0) }}</span>
+                    <span class="fs-4 fw-bold">${{ number_format($item->promo_price ?? $item->price, 0, ".", "") }}</span>
                 </div>
 
                 <hr class="my-4">
@@ -76,7 +76,7 @@
                     <i class="fa fa-chevron-left me-2"></i> Back
                 </a>
                 <div class="d-flex align-items-center">
-                    <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($item->promo_price ?? $item->price, 0) }}</strong>
+                    <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($item->promo_price ?? $item->price, 0, ".", "") }}</strong>
                     <div wire:click="addToCart" wire:loading.attr="disabled" class="btn btn-rolo-dark text-white">
                         <span wire:loading.remove>Add to Cart <i class="fa fa-chevron-right ms-2"></i></span>
                         <span wire:loading.delay.longest>Adding...</span>

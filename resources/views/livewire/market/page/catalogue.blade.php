@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="card-title mb-0 text-dark">the {{ $product->name }}</h5>
-                            <span class="text-dark fw-bold">${{ number_format($product->price) }}</span>
+                            <span class="text-dark fw-bold">${{ number_format($product->price, 0, ".", "") }}</span>
                         </div>
                         <p class="card-text text-secondary small mb-0">{{ $product->short_desc }}</p>
                     </div>

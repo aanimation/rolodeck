@@ -58,7 +58,7 @@
                     <i class="fa fa-chevron-left me-2"></i> Back
                 </a>
                 <div class="d-flex align-items-center">
-                    <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($order->items->sum('price'), 0) }}</strong>
+                    <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($order->items->sum('price'), 0, ".", "") }}</strong>
                     <button type="submit" class="btn btn-rolo-{{ $validForm ? 'dark' : 'light' }} text-white" @if(!$validForm) disabled @endif>
                         Make Payment <i class="fa fa-chevron-right ms-2"></i>
                     </button>

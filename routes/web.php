@@ -34,7 +34,8 @@ Route::prefix('manage')->middleware('auth')->group(function () {
 |--------------------------------------------------------------------------
 */
 Route::middleware('setlocale')->group(function () {
-    Route::get('/', Home::class)->name('homepage');
+    // Route::get('/', Home::class)->name('homepage');
+    Route::get('/', function() { return redirect()->route('catalogue'); })->name('homepage');
     Route::get('/products', Catalogue::class)->name('catalogue');
     Route::get('/product/{slug}', Product::class)->name('product');
     Route::get('/cart/{session}', Cart::class)->name('cart');
