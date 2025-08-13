@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div class="container py-4 py-md-5 market-page vh-100">
+    <div class="container py-4 py-md-5 market-page">
         {{ $slot }}
     </div>
 

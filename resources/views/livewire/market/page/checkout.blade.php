@@ -6,10 +6,10 @@
 </style>
 @endpush
 
-<div class="mx-5">
-    <h3 class="mb-4 fw-normal">Your Details</h3>
+<form id="checkout-form" wire:submit.prevent="submit">
+    <div class="mx-5 vh-100">
+        <h3 class="mb-4 fw-normal">Your Details</h3>
 
-    <form id="checkout-form" wire:submit.prevent="submit">
         <div class="row mb-5">
             <div class="col-md-6">
                 <label for="name" class="form-label">Your Name</label>
@@ -51,19 +51,18 @@
                 @enderror
             </div>
         </div>
-
-        <div class="position-sticky bottom-0 bg-white border-top shadow-none py-3 px-4">
-            <div class="d-flex justify-content-between align-items-center">
-                <a wire:navigate href="{{ route('cart', $currentSession) }}" class="btn btn-outline-secondary">
-                    <i class="fa fa-chevron-left me-2"></i> Back
-                </a>
-                <div class="d-flex align-items-center">
-                    <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($order->items->sum('price'), 0, ".", "") }}</strong>
-                    <button type="submit" class="btn btn-rolo-{{ $validForm ? 'dark' : 'light' }} text-white" @if(!$validForm) disabled @endif>
-                        Make Payment <i class="fa fa-chevron-right ms-2"></i>
-                    </button>
-                </div>
+    </div>
+    <div class="position-sticky bottom-0 bg-white border-top shadow-none py-3 px-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <a wire:navigate href="{{ route('cart', $currentSession) }}" class="btn btn-outline-secondary">
+                <i class="fa fa-chevron-left me-2"></i> Back
+            </a>
+            <div class="d-flex align-items-center">
+                <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($order->items->sum('price'), 0, ".", "") }}</strong>
+                <button type="submit" class="btn btn-rolo-{{ $validForm ? 'dark' : 'light' }} text-white" @if(!$validForm) disabled @endif>
+                    Make Payment <i class="fa fa-chevron-right ms-2"></i>
+                </button>
             </div>
         </div>
-    </form>
-</div>
+    </div>
+</form>

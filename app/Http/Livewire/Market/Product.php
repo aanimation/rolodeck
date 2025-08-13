@@ -60,12 +60,14 @@ class Product extends Component
             'product_id' => $this->item->id,
             'color_index' => $this->selectedColor
         ],[
-            'color' => $this->item->colors[$this->selectedColor],
+            'color' => $this->item->colors ? $this->item->colors[$this->selectedColor] : null,
             'unit' => DB::raw('unit + 1'),
             'price' => DB::raw('price + '.($this->item->promo_price ?? $this->item->price)),
         ]);
 
         $this->cartCount++;
+
+        return redirect()->route('cart', $this->currentSession);
     }
 
     public function selectThumb($idx)

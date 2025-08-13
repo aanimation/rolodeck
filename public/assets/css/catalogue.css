@@ -24433,6 +24433,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.market-page .mh-fit {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.market-page #productCarousel {
+  z-index: -1;
+}
 .market-page .btn.btn-rolo-light {
   background-color: #748067;
 }

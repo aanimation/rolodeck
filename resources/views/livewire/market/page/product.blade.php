@@ -1,8 +1,8 @@
-<div>
+<div style="min-height: 100vh;">
     <x-market.top :cartCount="$cartCount ?? 0" :searchQuery="$searchQuery ?? ''" />
 
-    <div class="row vh-100">
-        <div class="col-md-6">
+    <div class="row vh-100 mh-fit">
+        <div class="col-md-6 mh-fit">
             <!-- Main Carousel -->
             <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div class="col-md-6 d-flex flex-column">
+        <div class="col-md-6 d-flex flex-column mh-fit">
             <div class="px-3 py-4" style="flex: 1;">
                 <x-market.breadcrumb />
 
@@ -57,7 +57,7 @@
                 </div>
                 @endif
 
-                <div class="product-description" style="max-height: 350px; overflow-y: auto;">
+                <div class="product-description" style="max-height: 50%; overflow-y: auto;">
                     {!! $item->description !!}
 
                     @if($item->content)
@@ -72,18 +72,18 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="position-sticky bottom-0 bg-white border-top shadow-none py-3 px-4">
-            <div class="d-flex justify-content-between align-items-center">
-                <a wire:navigate href="{{ route('catalogue') }}" class="btn btn-outline-secondary">
-                    <i class="fa fa-chevron-left me-2"></i> Back
-                </a>
-                <div class="d-flex align-items-center">
-                    <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($item->promo_price ?? $item->price, 0, ".", "") }}</strong>
-                    <div wire:click="addToCart" wire:loading.attr="disabled" class="btn btn-rolo-dark text-white">
-                        <span wire:loading.remove>Add to Cart <i class="fa fa-chevron-right ms-2"></i></span>
-                        <span wire:loading.delay.longest>Adding...</span>
-                    </div>
+    <div class="position-sticky bottom-0 bg-white border-top shadow-none py-3 px-4 mh-fit">
+        <div class="d-flex justify-content-between align-items-center">
+            <a wire:navigate href="{{ route('catalogue') }}" class="btn btn-outline-secondary">
+                <i class="fa fa-chevron-left me-2"></i> Back
+            </a>
+            <div class="d-flex align-items-center">
+                <strong class="fs-5 fw-normal me-3 mb-3">${{ number_format($item->promo_price ?? $item->price, 0, ".", "") }}</strong>
+                <div wire:click="addToCart" wire:loading.attr="disabled" class="btn btn-rolo-dark text-white">
+                    <span wire:loading.remove>Add to Cart <i class="fa fa-chevron-right ms-2"></i></span>
+                    <span wire:loading.delay.longest>Adding...</span>
                 </div>
             </div>
         </div>

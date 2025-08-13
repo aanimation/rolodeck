@@ -7,6 +7,14 @@ body {
 }
 
 .market-page {
+  .mh-fit {
+    max-height: fit-content;
+  }
+
+  #productCarousel {
+    z-index: -1;
+  }
+
   // button
   .btn.btn-rolo-light {
     background-color: #748067;

@@ -1,44 +1,34 @@
 # ROLO-Deck
-
-## Stack
 * Laravel 12
-* Livewire 3
-* AlpineJs
-* PHPUnit
+* Livewire 3 + AlpineJs
+* Stripe Webhook
 
-## Getting started
+## Prepare
+Prepare a mysql/postgres database credential within database name, username and password
+
 ```
 clone existing_repo
 git clone git@github.com:aanimation/rolodeck.git
-```
 
-## Prepare
-```
 cd rolodeck
-composer install
-npm install
-```
-
-Prepare a database credential within database name, username and password
-for next env
-```
-DB_DATABASE=
-DB_USERNAME=
-DB_PASSWORD=
-```
-
-## Setup
-```
 copy .env.example to .env file
 
+composer install
 php artisan key:generate
 php artisan migrate --seed
 php artisan storage:link
-```
 
-## Assets
-```
+npm install
 npm run dev
 ```
 
-Happy Never Ending !!!
+## Sitemap
+* products, product, cart, checkout
+* login (Admin Dashboard)
+
+## Notes
+Stripe responses : [Rolodeck Sheet](https://docs.google.com/spreadsheets/d/1YlHNlranPeBvGwRQhM6HI7WoqIaysjJSHRb7dRKMjZc/)
+
+Cheers !!!
+
+Arham Arifuddin
