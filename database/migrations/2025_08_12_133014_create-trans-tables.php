@@ -41,7 +41,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->foreignId('order_id')->index('order_idx');
             $table->foreignId('product_id')->index('product_idx');
-            $table->string('color')->nullable();
+            $table->json('color')->nullable();
             $table->integer('unit');
             $table->decimal('price', 10, 2)->default(0);
             $table->timestamps();

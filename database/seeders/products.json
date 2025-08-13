@@ -15,8 +15,14 @@
             "1 Descaling Dose, and 2 Cleaning Tablets"
         ],
         "colors": [
-            "stainless steel",
-            "black truffle"
+            {
+                "name": "stainless steel",
+                "image_url": "products/barista-express-1-steel.png"
+            },
+            {
+                "name": "black truffle",
+                "image_url": "products/barista-express-2-black.png"
+            }
         ],
         "price": 998,
         "promo_price": 798,

@@ -13,11 +13,11 @@
             <ul class="list-group list-group-flush">
                 @foreach($order->items as $item)
                 <li class="list-group-item d-flex align-items-center p-3">
-                    <img src="{{ asset('/assets/img/'.$item->product->image_urls[0]) }}" alt="Barista Express" class="rounded me-3" style="width: 80px; height: 80px; object-fit: cover;">
+                    <img src="{{ asset('/assets/img/'.($item->color ? $item->color['image_url'] : $item->product->image_urls[0])) }}" alt="cart-thumb-{{ $loop->iteration }}" class="rounded me-3" style="width: 80px; height: 80px; object-fit: cover;">
                     <div class="flex-grow-1">
                         <h5 class="mb-1">the {{ $item->product->name }}</h5>
                         @if($item->color)
-                            <p class="mb-0 text-muted">{{ $item->color }}</p>
+                            <p class="mb-0 text-muted text-capitalize">{{ $item->color['name'] }}</p>
                         @endif
                     </div>
                     <div class="text-end me-3">

@@ -47,9 +47,12 @@
                     <h6 class="fw-normal">Colour</h6>
                     <div class="d-flex align-items-center">
                         @foreach($item->colors as $color)
-                            <div wire:click="selectColor('{{ $color }}')" class="bg-{{ Str::contains($color, 'black') ? 'dark' : 'light' }} rounded me-3 cursor-pointer" style="width:30px; height:30px;"></div>
+                            <div wire:click="selectColor('{{ $loop->index }}')" 
+                                class="bg-gradient-{{ Str::contains($color['name'], 'black') ? 'dark' : 'light' }} rounded me-3 cursor-pointer" 
+                                style="width:30px; height:30px; border: {{ $selectedColor == $loop->index ? 'thin solid black' : 'none' }};">
+                            </div>
                         @endforeach
-                        <span class="ms-auto text-capitalize">{{ $selectedColor ?? $item->colors[0] }}</span>
+                        <span class="ms-auto text-capitalize">{{ $item->colors[$selectedColor ?? 0]['name'] }}</span>
                     </div>
                 </div>
                 @endif
