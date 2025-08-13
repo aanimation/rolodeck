@@ -42,6 +42,7 @@ return new class extends Migration
             $table->foreignId('order_id')->index('order_idx');
             $table->foreignId('product_id')->index('product_idx');
             $table->json('color')->nullable();
+            $table->smallInteger('color_index')->nullable();
             $table->integer('unit');
             $table->decimal('price', 10, 2)->default(0);
             $table->timestamps();

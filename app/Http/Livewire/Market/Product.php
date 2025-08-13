@@ -12,7 +12,7 @@ class Product extends Component
 {
     #[Url]
     public $slug;
-    public $item, $selectedColor, $cartCount = 0;
+    public $item, $selectedColor = 0, $cartCount = 0;
 
     #[Session(key: 'current_session')]
     public string $currentSession;
@@ -33,7 +33,7 @@ class Product extends Component
             \Log::error(['No item found', $this->slug, $e->getMessage()]);
             return redirect()->back();
         }
-// dd($this->item->toArray());
+
         if ($cart = Order::whereSession($this->currentSession)->first()) {
             $this->cartCount = $cart->items->sum('unit');
         }
@@ -58,8 +58,9 @@ class Product extends Component
         Cart::updateOrCreate([
             'order_id' => $order->id,
             'product_id' => $this->item->id,
-            'color' => $this->item->colors[$this->selectedColor]
+            'color_index' => $this->selectedColor
         ],[
+            'color' => $this->item->colors[$this->selectedColor],
             'unit' => DB::raw('unit + 1'),
             'price' => DB::raw('price + '.($this->item->promo_price ?? $this->item->price)),
         ]);
